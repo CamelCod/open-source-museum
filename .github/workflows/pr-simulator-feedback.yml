@@ -1,0 +1,42 @@
+name: PR Simulator Feedback
+
+on:
+  pull_request:
+    paths:
+      - "simulator/**"
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post welcome comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🎉 Welcome to open source!
+
+            Thanks for submitting your first PR to the Open Source Museum simulator!
+
+            **Here's what you did:**
+            - [x] Forked the repository
+            - [x] Cloned it locally
+            - [x] Created a branch
+            - [x] Made a change and committed
+            - [x] Pushed and opened a Pull Request
+
+            **You've completed the full open-source contribution cycle.** 🚀
+
+            **Next steps:**
+            - Head to [Stage 7 of the Onboarding Guide](/onboarding?stage=7) to learn what happens after your PR is reviewed
+            - Browse the [discovery engine](/onboarding?stage=3) to find a real project to contribute to
+            - Check out the [good first issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues?q=is%3Aopen+label%3A%22good+first+issue%22) in this very repo
+
+            A maintainer will review this shortly. Well done! 💪`
+            })

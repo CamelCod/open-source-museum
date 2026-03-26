@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sim-001",
+    "title": "Add a milestone to the timeline",
+    "description": "Add a new entry to `data/milestones.json` for an open-source project you think belongs in the museum. Follow the existing schema — fill in all required fields including `whyItMattered` and `whatItEnabledNext`.",
+    "difficulty": "beginner",
+    "estimatedMinutes": 20,
+    "labels": ["good first issue", "data"]
+  },
+  {
+    "id": "sim-002",
+    "title": "Fix a typo in CONTRIBUTING.md",
+    "description": "Read through `CONTRIBUTING.md` and fix any typo, grammatical error, or unclear sentence you find. Even one word matters — real open-source projects merge doc fixes like this every day.",
+    "difficulty": "beginner",
+    "estimatedMinutes": 10,
+    "labels": ["good first issue", "documentation"]
+  },
+  {
+    "id": "sim-003",
+    "title": "Add a project to the discovery engine",
+    "description": "Add a beginner-friendly open-source project to `data/discovery.json`. Find a real project on GitHub with `good first issue` labels and add it following the `DiscoveryProject` schema in `src/types/index.ts`.",
+    "difficulty": "beginner",
+    "estimatedMinutes": 15,
+    "labels": ["good first issue", "data"]
+  },
+  {
+    "id": "sim-004",
+    "title": "Improve an accessibility label on a component",
+    "description": "Find a button or interactive element in `src/components/` that is missing an `aria-label` or has a non-descriptive one. Add a meaningful label. Check `src/components/shared/` first — good places to start.",
+    "difficulty": "beginner",
+    "estimatedMinutes": 20,
+    "labels": ["good first issue", "accessibility"]
+  },
+  {
+    "id": "sim-005",
+    "title": "Add a missing alt tag to an image",
+    "description": "Search the codebase for any `<Image>` or `<img>` tags missing an `alt` attribute or with `alt=\"\"` that should have a description. Fix it with a meaningful alt text that describes what the image shows.",
+    "difficulty": "beginner",
+    "estimatedMinutes": 15,
+    "labels": ["good first issue", "accessibility"]
+  }
+]
